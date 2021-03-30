@@ -83,17 +83,17 @@ class ServiceNowAdapter extends EventEmitter {
     this.healthcheck();
   }
 
-  /**
-   * @memberof ServiceNowAdapter
-   * @method healthcheck
-   * @summary Check ServiceNow Health
-   * @description Verifies external system is available and healthy.
-   *   Calls method emitOnline if external system is available.
-   *
-   * @param {ServiceNowAdapter~requestCallback} [callback] - The optional callback
-   *   that handles the response.
-   */
-  healthcheck(callback) {
+/**
+ * @memberof ServiceNowAdapter
+ * @method healthcheck
+ * @summary Check ServiceNow Health
+ * @description Verifies external system is available and healthy.
+ *   Calls method emitOnline if external system is available.
+ *
+ * @param {ServiceNowAdapter~requestCallback} [callback] - The optional callback
+ *   that handles the response.
+ */
+healthcheck(callback) {
  this.getRecord((result, error) => {
    /**
     * For this lab, complete the if else conditional
@@ -145,7 +145,7 @@ class ServiceNowAdapter extends EventEmitter {
       */
  
  });
-  }
+}
 
   /**
    * @memberof ServiceNowAdapter
@@ -200,7 +200,8 @@ class ServiceNowAdapter extends EventEmitter {
      * Note how the object was instantiated in the constructor().
      * get() takes a callback function.
      */
-      this.get(callback);
+
+     this.get(callback);
   }
 
   /**
@@ -219,6 +220,7 @@ class ServiceNowAdapter extends EventEmitter {
      * Note how the object was instantiated in the constructor().
      * post() takes a callback function.
      */
+
      this.post(callback);
   }
 }
